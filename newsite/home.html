@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+  <title>My Website</title>
+</head>
+<body>
+  <div class="bg-layer bg-back"></div>
+  <div class="bg-layer bg-mid"></div>
+  <div class="bg-layer bg-front"></div>
+
+  <div class="page-content">
+    <div id="container">
+      <div id="box">
+        <aside id="side">
+          <div class="sidebox">
+            <div class="subheader">Explore</div>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="https://hayesoquinn.com">Portfolio Site</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebox">
+            <div class="subheader">Links</div>
+              <div class="body-text">
+                <p>My social media and other links:</p>
+              </div>
+            <ul>
+              <li><a href="https://github.com/hayesoq" target="_blank">GitHub</a></li>
+              <li><a href="https://www.instagram.com/hayesoquinn" target="_blank">Instagram</a></li>
+              <li><a href="https://www.chess.com/member/0quinn" target="_blank">Chess</a></li>
+              <li><a href="https://www.linkedin.com/in/hayesoquinn/" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebox">
+            <div class="subheader">Misc.</div>
+              <div class="body-text">
+                <p>Some of my favorite websites and other interesting info:</p>
+              </div>
+            <ul>
+              <li><a href="https://landchad.net/" target="_blank">LandChad (How to Start a Website)</a></li>
+              <li><a href="https://based.cooking/" target="_blank">Based Cooking</a></li>
+              <li><a href="https://zoom.earth/" target="_blank">Zoom.Earth</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main id="main">
+          <div class="mainboxes">
+            <div class="subheader">Welcome</div>
+              <img src="assets/images/linux_penguin.jpg" alt="peguin" class="image-frame"></img>
+              <div class="body-text">
+                <p>Hello! Thanks for visiting my website.</p>
+                <p>There is a music player on the left side of the screen that you can drag and drop anywhere on the page. 
+                  I included some chill music for you to listen to as you browse. The player only works on the home page for now.</p>
+              </div>
+          </div>
+
+          <div class="mainboxes">
+            <div class="subheader">About This Site</div>
+            <img src="assets/images/raspi_4b.png" alt="raspberry pi 4b" class="image-frame"></img>
+              <div class="body-text">
+                <p>I created this website as a fun little side project to improve my web development skills.</p>
+                <p>I have a main portfolio site that looks much more professional but these pages are more of a fun little personal project.</p>
+                <p>This site is entirely self-hosted on my raspberry pi model 4B.</p>
+              </div>
+          </div>
+
+          <div class="mainboxes">
+            <div class="subheader">Updates</div>
+            <div class="body-text">
+              <ul>
+                <li>04/15/2026 - Started building website</li>
+                <li>04/15/2026 - Added music player</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="footer">
+            <p>Hayes O'Quinn - 2026</p>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <div id="music-player" class="player-window">
+    <div id="player-header" class="player-header">
+      <span>Music Player</span>
+      <button id="minimize-player" type="button">—</button>
+    </div>
+
+    <div class="player-body" id="player-body">
+      <p class="track-title" id="track-title"></p>
+
+      <audio id="audio-player" controls>
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="player-nav">
+        <button id="prev-track" type="button">⏮ Back</button>
+        <button id="next-track" type="button">Next ⏭</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const player = document.getElementById("music-player");
+  const header = document.getElementById("player-header");
+  const minimizeBtn = document.getElementById("minimize-player");
+  const playerBody = document.getElementById("player-body");
+
+  const audioPlayer = document.getElementById("audio-player");
+  const trackTitle = document.getElementById("track-title");
+  const prevTrackBtn = document.getElementById("prev-track");
+  const nextTrackBtn = document.getElementById("next-track");
+
+  const playlist = [
+    { title: "Pink Bullets - The Shins", src: "assets/music/pinkbullets_theshins.mp3" },
+    { title: "Rituals - Watchhouse", src: "assets/music/rituals_watchhouse.mp3" },
+    { title: "In Control - Greensky Bluegrass", src: "assets/music/in_control_greensky_bluegrass.mp3" },
+    { title: "Everything In Its Right Place - Radiohead", src: "assets/music/everything_radiohead.mp3" },
+    { title: "Love Song - 311", src: "assets/music/lovesong_311.mp3" },
+    { title: "Michigan - The Milk Carton Kids", src: "assets/music/michigan_milkcartonkids.mp3" },
+    { title: "Ramona - Guster", src: "assets/music/ramona_guster.mp3" },
+    { title: "Rings - Pinegrove", src: "assets/music/rings_pinegrove.mp3" }
+  ];
+
+  let currentTrack = 0;
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  function loadTrack(index, shouldPlay = false) {
+    currentTrack = index;
+    audioPlayer.src = playlist[currentTrack].src;
+    trackTitle.innerHTML = `Now Playing:<br><br> ${playlist[currentTrack].title}`;
+    audioPlayer.load();
+
+    if (shouldPlay) {
+      audioPlayer.play().catch(() => {});
+    }
+  }
+
+  prevTrackBtn.addEventListener("click", () => {
+    if (playlist.length <= 1) return;
+    currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+    loadTrack(currentTrack, true);
+  });
+
+  nextTrackBtn.addEventListener("click", () => {
+    if (playlist.length <= 1) return;
+    currentTrack = (currentTrack + 1) % playlist.length;
+    loadTrack(currentTrack, true);
+  });
+
+  audioPlayer.addEventListener("ended", () => {
+    if (playlist.length <= 1) return;
+    currentTrack = (currentTrack + 1) % playlist.length;
+    loadTrack(currentTrack, true);
+  });
+
+  header.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - player.offsetLeft;
+    offsetY = e.clientY - player.offsetTop;
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    player.style.left = `${e.clientX - offsetX}px`;
+    player.style.top = `${e.clientY - offsetY}px`;
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+
+  minimizeBtn.addEventListener("click", () => {
+    playerBody.classList.toggle("hidden");
+  });
+
+  loadTrack(currentTrack);
+</script>
+
+</body>
+</html>

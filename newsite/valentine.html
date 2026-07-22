@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valentine?</title>
+  <link rel="icon" type="image/png" href="/assets/images/hearts.png">
+  <link rel="stylesheet" href="assets/css/valentine_styles.css" />
+</head>
+
+<body>
+  <main class="card" id="card">
+    <!-- Ask screen -->
+    <section id="askScreen">
+      <h1>KK, Will you be my Valentine? 💘</h1>
+
+      <img src="assets/images/IMG_1494.JPEG" alt="MeAndKK" />
+
+      <p>Be honest… but choose wisely 😅</p>
+
+      <div class="buttons">
+        <button id="yesBtn" type="button">Yes 😍</button>
+        <button id="noBtn" type="button">No 💀</button>
+      </div>
+
+      <button id="homeBtn" type="button">Back ↩️</button>
+
+      <div class="hint" id="hint"></div>
+    </section>
+
+    <!-- Yay screen -->
+    <section id="yayScreen" class="hidden">
+      <div class="yay">
+        <h2>🎆 YAY!!! 🎆</h2>
+
+        <img src="assets/images/IMG_1460.JPEG" alt="UsAgain">
+
+        <p class="sub">Best decision ever. I love you 💖</p>
+
+        <button id="backBtn" type="button">Back ↩️</button>
+      </div>
+
+      <div class="fireworks hidden" id="fireworks"></div>
+    </section>
+  </main>
+
+  <script defer src="js/app.js"></script>
+</body>
+</html>

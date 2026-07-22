@@ -1,0 +1,17 @@
+/* CSS Styling */
+
+.top-area + section {
+  margin-top: 88px;
+}
+
+.extra-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* kill the line above the list in Education */
+#education .single-about-txt p {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}

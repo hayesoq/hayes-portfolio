@@ -7,14 +7,21 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="single-about-txt extra-content">
-					<h3>My research interests include software engineering, data visualization, and machine learning.</h3>
-					<p>Some courses I have taken or am currently taking:</p>
+					<h3>My technical interests include Linux infrastructure, data center operations, DevOps, networking, virtualization, and systems automation.</h3>
+					<p>
+						I earned a Bachelor of Science in Computer Science from the University of Texas at San Antonio.
+						My coursework and hands-on projects have given me experience with software development, databases,
+						operating systems, networking, cloud technologies, and data analysis.
+					</p>
+					<p>Relevant coursework includes:</p>
 					<ul>
-						<li>Web Technologies</li>
-						<li>Deep Learning</li>
-						<li>Database Systems</li>
 						<li>Software Engineering</li>
-						<li>Calculus I & II</li>
+						<li>Web Technologies</li>
+						<li>Database Systems</li>
+						<li>Operating Systems</li>
+						<li>Computer Networks</li>
+						<li>Cloud Computing</li>
+						<li>Machine Learning & Deep Learning</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +47,6 @@
 								</h4>
 								<h5>boerne, TX</h5>
 								<p class="description">
-									
 								</p>
 							</div><!--/.timeline-content-->
 						</div><!--/.timeline-->
@@ -50,7 +56,7 @@
 					<div class="single-horizontal-timeline">
 						<div class="experience-time">
 							<h2>2022 - 2023</h2>
-							<h3>associates degree (AS)</h3>
+							<h3>associate of science</h3>
 						</div><!--/.experience-time-->
 						<div class="timeline-horizontal-border">
 							<i class="fa fa-circle" aria-hidden="true"></i>
@@ -63,7 +69,7 @@
 								</h4>
 								<h5>san antonio, TX</h5>
 								<p class="description">
-									
+									Completed foundational coursework before transferring to UTSA.
 								</p>
 							</div><!--/.timeline-content-->
 						</div><!--/.timeline-->
@@ -73,7 +79,7 @@
 					<div class="single-horizontal-timeline">
 						<div class="experience-time">
 							<h2>2023 - 2026</h2>
-							<h3>bachelor <span>of </span> computer science</h3>
+							<h3>bachelor of science in computer science</h3>
 						</div><!--/.experience-time-->
 						<div class="timeline-horizontal-border">
 							<i class="fa fa-circle" aria-hidden="true"></i>
@@ -87,7 +93,7 @@
 								</h4>
 								<h5>san antonio, TX</h5>
 								<p class="description">
-									
+									Focused on software engineering, data science, and applied computing.
 								</p>
 							</div><!--/.timeline-content-->
 						</div><!--/.timeline-->

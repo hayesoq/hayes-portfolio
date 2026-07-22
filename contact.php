@@ -240,7 +240,7 @@
 						<div class="contact-adress">
 							<div class="contact-add-head">
 								<h3>Hayes O'Quinn</h3>
-								<p>Computer Science Student</p>
+								<p>Computer Science Graduate</p>
 							</div>
 							<div class="contact-add-info">
 								<div class="single-contact-add-info">

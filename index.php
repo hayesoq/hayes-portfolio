@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Welcome to Hayes O'Quinn's Homepage</title>
+<title>Hayes O'Quinn</title>
 <link rel="icon" type="image/png" href="assets/images/penguin_favicon.png">
 <link href="assets/css/main.css" rel="stylesheet">
 <!--font-awesome.min.css-->

@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Hayes O'Quinn</title>
 <link rel="icon" type="image/png" href="assets/images/penguin_favicon.png">
 <link href="assets/css/main.css" rel="stylesheet">
@@ -28,6 +29,8 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <!--responsive.css-->
 <link rel="stylesheet" href="assets/css/responsive.css">
+<!--mobile.css (loaded last to override)-->
+<link rel="stylesheet" href="assets/css/mobile.css">
 </head>
 <body>
 		<!--[if lte IE 9]>
@@ -96,7 +99,6 @@
 		<!--footer-copyright end-->
 		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
-        
+		<script src="assets/js/mobile.js"></script>
     </body>
 </html>

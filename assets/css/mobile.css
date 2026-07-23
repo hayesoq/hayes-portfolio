@@ -10,6 +10,14 @@ html, body {
 }
 img { max-width: 100%; height: auto; }
 
+/* The theme hard-codes "height: 500px" on the about/hobbies/fun-site images,
+   so when the width scales down on smaller screens the image is stretched
+   vertically. Let height follow the width to preserve the aspect ratio. */
+.single-about-img img {
+    height: auto !important;
+    max-width: 100%;
+}
+
 /* ---------------------------------------------------------------------
    Navigation — collapsible hamburger menu (<= 991px)
    The toggle button appears at <=992px, so drive the menu at the same

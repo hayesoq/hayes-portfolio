@@ -1,7 +1,7 @@
-<!--funsite start -->
-<section id="funsite" class="about">
+<!--sandbox start -->
+<section id="sandbox" class="about">
 	<div class="section-heading text-center">
-		<h2>fun site</h2>
+		<h2>sandbox</h2>
 	</div>
 	<div class="container">
 		<div class="about-content">
@@ -9,7 +9,7 @@
 				<div class="col-sm-6">
 					<div class="single-about-txt">
 						<h3>
-							This is a link to a little website where I practice web development and just do whatever I want with. It was inspired by the indie web and web revival movements.
+							This is a link to a little website (my sandbox) where I practice web development and just do whatever I want with. It was inspired to start this project by the indie web and web revival movements.
 						</h3>
 
 						<p>
@@ -30,5 +30,5 @@
 			</div>
 		</div>
 	</div>
-</section><!--/.funsite-->
-<!--funsite end -->
+</section><!--/.sandbox-->
+<!--sandbox end -->

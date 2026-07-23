@@ -1,0 +1,60 @@
+/* =====================================================================
+   fonts.css — self-hosted Poppins (Open Font License)
+   Bundled locally so the site renders in the SAME font on every device,
+   with no dependency on an external CDN or fonts installed on the device.
+   Files live in assets/fonts/ (subset to the Latin range).
+   font-weight 600 (SemiBold) is not shipped; the browser resolves it to
+   the 700 face automatically.
+   ===================================================================== */
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/poppins-300.woff2') format('woff2'),
+         url('../fonts/poppins-300.woff')  format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/poppins-400.woff2') format('woff2'),
+         url('../fonts/poppins-400.woff')  format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/poppins-500.woff2') format('woff2'),
+         url('../fonts/poppins-500.woff')  format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/poppins-700.woff2') format('woff2'),
+         url('../fonts/poppins-700.woff')  format('woff');
+}
+
+/* ---------------------------------------------------------------------
+   Apply Poppins consistently, with an explicit fallback stack.
+   The theme declares "'Poppins', sans-serif" in several places, which
+   left the fallback up to each OS. This pins a defined chain so that
+   even during font load (or if the font ever fails) the result is
+   predictable and uniform. Loaded last, so it wins the cascade.
+--------------------------------------------------------------------- */
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, span, li,
+input, textarea, select, button,
+.form-control,
+.navbar-brand,
+.header-text h2,
+.header-text p {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}

@@ -31,6 +31,8 @@
 <link rel="stylesheet" href="assets/css/responsive.css">
 <!--mobile.css (loaded last to override)-->
 <link rel="stylesheet" href="assets/css/mobile.css">
+<!--fonts.css (self-hosted Poppins + fallback stack)-->
+<link rel="stylesheet" href="assets/css/fonts.css">
 </head>
 <body>
 		<!--[if lte IE 9]>

@@ -10,9 +10,6 @@ html, body {
 }
 img { max-width: 100%; height: auto; }
 
-/* The theme hard-codes "height: 500px" on the about/hobbies/fun-site images,
-   so when the width scales down on smaller screens the image is stretched
-   vertically. Let height follow the width to preserve the aspect ratio. */
 .single-about-img img {
     height: auto !important;
     max-width: 100%;
@@ -51,14 +48,45 @@ img { max-width: 100%; height: auto; }
         display: block;
     }
 
+    nav.navbar.bootsnav .navbar-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        float: none !important;
+        width: 100%;
+        margin: 0 !important;
+        padding: 10px 0;
+        min-height: 60px;
+    }
     .navbar-header a.navbar-brand,
     .navbar-header a.navbar-brand:hover,
     .navbar-header a.navbar-brand:focus {
-        padding: 20px 0;
+        order: 0;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        display: flex;
+        align-items: center;
         font-size: 18px;
+        line-height: 1.2;
     }
     nav.navbar.bootsnav .navbar-toggle {
-        margin-top: 16px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        float: none !important;
+        margin: 0 !important;
+        border: none !important;   /* drop the red outline box */
+        background: transparent !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
     }
 }
 
